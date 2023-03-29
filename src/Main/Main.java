@@ -91,8 +91,8 @@ public class Main {
     private static boolean isValidInteger(String text) throws Exception {
         boolean valid = false;
         try {
-            if (Integer.parseInt(text) <= 10) valid = true;
-            else throw new Exception("Одно или оба числа больше 10");
+            if (Integer.parseInt(text) > 0 && Integer.parseInt(text) <= 10) valid = true;
+            else throw new Exception("Одно или оба числа меньше 1 или больше 10");
         } catch (NumberFormatException e) {
 
         }
